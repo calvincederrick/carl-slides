@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slider</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {font-family: Arial, sans-serif;}
+    .slider {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 12s infinite;
+    }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      color: white;
+      background-size: cover;
+      background-position: center;
+      text-shadow: 2px 2px 5px black;
+    }
+.slide1 {
+  background: linear-gradient(rgba(50, 50, 50, 0.6), rgba(50, 50, 50, 0.6)),
+              url('https://source.unsplash.com/1600x900/?tech');
+  background-size: cover;
+}
+.slide2 {
+  background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)),
+              url('https://source.unsplash.com/1600x900/?cyber');
+  background-size: cover;
+}
+.slide3 {
+  background: linear-gradient(rgba(70, 70, 70, 0.6), rgba(70, 70, 70, 0.6)),
+              url('https://source.unsplash.com/1600x900/?hacker');
+  background-size: cover;
+}
+
+
+    @keyframes slide {
+      0%   {transform: translateX(0);}
+      33%  {transform: translateX(-100vw);}
+      66%  {transform: translateX(-200vw);}
+      100% {transform: translateX(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide slide1">Welcome To A Home of Great Tech Products</div>
+      <div class="slide slide2">Code That Bypasses Limits</div>
+      <div class="slide slide3">Explore Projects That Move Systems</div>
+    </div>
+  </div>
+</body>
+</html>
